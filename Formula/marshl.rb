@@ -5,12 +5,12 @@
 class Marshl < Formula
   desc "marshl — local agent supervisor that bridges to the Marshl cloud."
   homepage "https://marshl.run"
-  version "0.1.0"
+  version "0.1.1"
   license "Proprietary"
 
   on_macos do
-    url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.0/marshl_0.1.0_darwin_all.tar.gz"
-    sha256 "a47280db5632c569872ff67242baa090d3fcffe5886e769f2bffff6f05556a55"
+    url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.1/marshl_0.1.1_darwin_all.tar.gz"
+    sha256 "467b816b125888707b8aadb40dfc103ad731e5729026ccb35d31ec8c1b54cca6"
 
     define_method(:install) do
       bin.install "marshl"
@@ -20,16 +20,16 @@ class Marshl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.0/marshl_0.1.0_linux_amd64.tar.gz"
-      sha256 "3ca459c1a39c138746334b31e82d668fea6caf7268f75b017cbbcdb9f71d7b6f"
+      url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.1/marshl_0.1.1_linux_amd64.tar.gz"
+      sha256 "9efc20e029218453647433a20c8088ecdedde8ed4be3634ae54bb9e2413c0e9c"
       define_method(:install) do
         bin.install "marshl"
         bin.install "marshld"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.0/marshl_0.1.0_linux_arm64.tar.gz"
-      sha256 "f033b86a3a5f7a57e89825f4c617c5500d804adbe8808a0272325ee46eb60a3e"
+      url "https://github.com/KultivatorConsulting/marshl/releases/download/v0.1.1/marshl_0.1.1_linux_arm64.tar.gz"
+      sha256 "ebee00471901e4713042f805c32c7e857e9df453dd722d78243bebfa5b14ffac"
       define_method(:install) do
         bin.install "marshl"
         bin.install "marshld"
